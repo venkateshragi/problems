@@ -28,8 +28,8 @@ public class FindAllOccurencesInRowNColSortedMatrix {
 
     public static void main(String[] args) {
         int mat[][] = {
-                {10, 20, 28, 40},
-                {15, 25, 29, 45},
+                {10, 20, 28, 29},
+                {15, 25, 29, 29},
                 {27, 29, 29, 48},
                 {29, 33, 39, 50},
                 {29, 34, 40, 51}};
