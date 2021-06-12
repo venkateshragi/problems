@@ -1,5 +1,9 @@
 package com.exam.all.microsoft;
 
+import java.util.ArrayDeque;
+import java.util.Arrays;
+import java.util.Collections;
+
 /**
  * The task is to find all occurences of a given number in a row wise and column wise sorted matrix
  * Input :

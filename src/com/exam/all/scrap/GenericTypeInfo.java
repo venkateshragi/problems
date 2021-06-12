@@ -2,15 +2,9 @@ package com.exam.all.scrap;
 
 //import org.apache.commons.lang3.reflect.TypeUtils;
 
-import java.lang.reflect.Field;
-import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Stream;
 
 /**
  * << descriptive comments>>

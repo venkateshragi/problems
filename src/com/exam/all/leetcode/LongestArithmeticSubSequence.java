@@ -67,21 +67,22 @@ public class LongestArithmeticSubSequence {
         if (a == null) return 0;
 
         HashMap<Integer, Integer>[] dp = new HashMap[a.length];
-        dp[0] = new HashMap();
-        int res = 1;
-        for (int i = 1; i < a.length; i++) {
-            dp[i] = new HashMap();
-            for (int j = i - 1; j >= 0; j--) {
+
+        int res = 0;
+        for (int i = 0; i < a.length; i++) {
+            dp[i] = new HashMap<>();
+            for (int j = 0; j < i; j++) {
                 int diff = a[i] - a[j];
-                int prev = dp[j].getOrDefault(diff, 0) + 1;
-                int cur = Math.max(dp[i].getOrDefault(diff, 0), prev);
+                //get default 1 as we will add 1 in next step which makes length for this diff 2 in case this is first
+                //we are seeing the diff.
+                int prev = dp[j].getOrDefault(diff, 1);
 
-                dp[i].put(diff, cur);
+                dp[i].put(diff, prev+1);
 
-                res = Math.max(res, cur);
+                res = Math.max(res, dp[i].get(diff));
             }
         }
 
-        return res + 1;
+        return res;
     }
 }

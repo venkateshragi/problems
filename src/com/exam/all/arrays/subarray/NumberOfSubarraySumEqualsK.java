@@ -1,9 +1,11 @@
-package com.exam.all.leetcode;
+package com.exam.all.arrays.subarray;
 
 import java.util.HashMap;
 import java.util.Map;
 
 /**
+ *
+ * https://leetcode.com/problems/subarray-sum-equals-k/
  * Given an array of integers and an integer k, you need to find the total number of continuous
  * subarrays whose sum equals to k.
  *
@@ -22,9 +24,11 @@ import java.util.Map;
  */
 public class NumberOfSubarraySumEqualsK {
 
-    public int subarraySum1(int[] nums, int k) {
+    public static int subarraySum1(int[] nums, int k) {
         int count = 0, sum = 0;
         HashMap < Integer, Integer > map = new HashMap < > ();
+        //need this when sum == k => diff = 0. if this is not added we have to incr count by 1 explicitly as done
+        //in below subarraySum method
         map.put(0, 1);
         for (int i = 0; i < nums.length; i++) {
             sum += nums[i];
@@ -35,7 +39,7 @@ public class NumberOfSubarraySumEqualsK {
         return count;
     }
 
-    public int subarraySum(int[] nums, int k) {
+    public static int subarraySum(int[] nums, int k) {
         if(nums == null || nums.length == 0)
             return 0;
         int sum = 0;
@@ -53,13 +57,13 @@ public class NumberOfSubarraySumEqualsK {
                 int numberOfTimes = sumMap.get(diff);
                 count += numberOfTimes;
             }
-            if(sumMap.containsKey(sum)) {
-                sumMap.put(sum, sumMap.get(sum) + 1);
-            } else {
-                sumMap.put(sum, 1);
-            }
-
+            sumMap.put(sum, sumMap.getOrDefault(sum, 0) + 1);
         }
         return count;
+    }
+
+    public static void main (String[] args) {
+        int arr[] = {0,0,0,0,0,0,0,0,0,0};
+        System.out.println(subarraySum(arr, 0));
     }
 }
