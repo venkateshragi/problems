@@ -51,10 +51,5 @@ public class MCTOfLeafNodes {
 
         System.out.println(c);
 
-        TreeSet<Integer> nm = new TreeSet<>();
-        nm.add(2);
-        nm.add(1);
-        System.out.println(nm.remove(4));
-        System.out.println(nm.size());
     }
 }

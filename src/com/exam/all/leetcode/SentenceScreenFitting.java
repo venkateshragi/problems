@@ -69,7 +69,7 @@ public class SentenceScreenFitting {
             if(completeSentence.charAt(validCharsCount % length) == ' ') {
                 //move to next position
                 validCharsCount++;
-            } else {
+            } else { //the above if failed => there is some char at that pos, so we start checking from -1 from that pos.
                 while (validCharsCount > 0 && completeSentence.charAt((validCharsCount - 1) % length) != ' ') {
                     validCharsCount--;
                 }

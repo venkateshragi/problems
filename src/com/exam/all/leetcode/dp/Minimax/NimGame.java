@@ -1,4 +1,4 @@
-package com.exam.all.leetcode.dp;
+package com.exam.all.leetcode.dp.Minimax;
 
 import java.util.HashMap;
 import java.util.Map;

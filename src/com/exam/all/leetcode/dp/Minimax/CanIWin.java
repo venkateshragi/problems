@@ -1,4 +1,4 @@
-package com.exam.all.leetcode.dp;
+package com.exam.all.leetcode.dp.Minimax;
 
 /**
  * https://leetcode.com/problems/can-i-win/

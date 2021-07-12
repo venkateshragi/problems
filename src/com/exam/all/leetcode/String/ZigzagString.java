@@ -1,7 +1,5 @@
 package com.exam.all.leetcode.String;
 
-import java.util.ArrayList;
-
 /**
  * << descriptive comments>>
  *

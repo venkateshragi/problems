@@ -43,7 +43,7 @@ public class LargestTimeOfArray {
         return String.format("%02d:%02d", maxTime / 60, maxTime % 60);
     }
 
-    //this fixes a digit in each position in each iteration (DFS). Thus will have permuations 4! only and no repetitions.
+    //this fixes a digit in each position in each iteration (DFS). Thus will have permutations 4! only and no repetitions.
     private void permutate(int[] arr, int start) {
         if(start == arr.length) {
             buildTime(arr);

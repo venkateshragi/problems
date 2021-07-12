@@ -17,10 +17,13 @@ import java.util.TreeSet;
  *
  * <p>Example 1:
  *
- * <p>Input: bulbs = [1,3,2], k = 1 Output: 2 Explanation: On the first day: bulbs[0] = 1, first
- * bulb is turned on: [1,0,0] On the second day: bulbs[1] = 3, third bulb is turned on: [1,0,1] On
- * the third day: bulbs[2] = 2, second bulb is turned on: [1,1,1] We return 2 because on the second
- * day, there were two on bulbs with one off bulb between them. Example 2:
+ * <p>Input: bulbs = [1,3,2], k = 1
+ * <p>Output: 2
+ * <p>Explanation:
+ * <p>On the first day: bulbs[0] = 1, first bulb is turned on: [1,0,0]
+ * <p>On the second day: bulbs[1] = 3, third bulb is turned on: [1,0,1]
+ * <p>On the third day: bulbs[2] = 2, second bulb is turned on: [1,1,1]
+ * <p> We return 2 because on the second day, there were two on bulbs with one off bulb between them. Example 2:
  *
  * <p>Input: bulbs = [1,2,3], k = 1 Output: -1
  *

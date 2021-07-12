@@ -1,5 +1,11 @@
 package com.exam.all;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Locale;
+import java.util.TimeZone;
+
 public class Solution {
 
 //    void printPostOrder(int in[], int pre[], int n) {
@@ -26,5 +32,30 @@ public class Solution {
 //                return i;
 //
 //    }
+
+    public static void main(String[] args) {
+        /*SimpleDateFormat sf = new SimpleDateFormat("MM/dd/yy hh:mm:ss aa zzz", Locale.ENGLISH);
+        sf.setTimeZone(TimeZone.getTimeZone("GMT"));
+        Date curDate = new Date();
+        String curformatDate = sf.format(curDate);
+        System.out.println(curformatDate);
+        try {
+//            System.out.println(sf.parse("06/26/19 08:00 AM GMT").getTime());
+            Date curFormatdate = sf.parse(curformatDate);
+            System.out.println(curDate.getTime());
+            System.out.println(curFormatdate.getTime());
+            System.out.println((sf.parse(curformatDate).getTime() - sf.parse("06/26/19 08:00:00 AM GMT").getTime())/1000);
+            System.out.println((curDate.getTime() - sf.parse("06/26/21 08:00:00 AM GMT").getTime())/1000);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }*/
+        String s = "  a  b  c  ";
+        String[] a = s.split("\\ +");
+        for(String d : a) {
+            System.out.println(d);
+        }
+
+
+    }
 
 }
